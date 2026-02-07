@@ -246,13 +246,16 @@ body {
   overflow: hidden;
   border: 1px solid var(--border);
   background: var(--bg);
+  aspect-ratio: 16 / 9;
+  min-height: 200px;
 }
 
 .outlet-img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
-  vertical-align: middle;
+  object-fit: cover;
+  object-position: center;
 }
 
 .visit-content {
@@ -261,19 +264,32 @@ body {
   gap: 1rem;
 }
 
+.visit-label {
+  margin: 0 0 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
 .visit-address,
 .visit-hours {
-  margin: 0;
+  margin: 0 0 1rem;
   font-size: 1rem;
-  color: var(--text-muted);
+  color: var(--text);
   line-height: 1.8;
 }
 
 .visit-address {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   color: var(--coffee);
+}
+
+.visit-content .visit-hours:last-child {
+  margin-bottom: 0;
 }
 
 .contact-outlet {
