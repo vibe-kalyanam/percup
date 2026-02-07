@@ -4,7 +4,7 @@
   /* Coffee brown & green leaves theme */
   --bg: #f5f2ec;
   --bg-page: #ffffff;
-  --header-footer-bg: #e8efe6;
+  --header-footer-bg: #f5f2ec;
   --text: #3d2e24;
   --text-muted: #5c4a3a;
   --coffee: #5c4033;
@@ -591,45 +591,8 @@ main {
   width: 100%;
 }
 
-.footer-col--newsletter .footer-heading {
-  margin-bottom: 0.75rem;
-}
-
-.footer-newsletter {
-  display: flex;
-  gap: 0;
-  margin-bottom: 1rem;
-  max-width: 280px;
-}
-
-.footer-newsletter-input {
-  flex: 1;
-  padding: 0.5rem 0.75rem;
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  border: 1px solid var(--green);
-  border-right: 0;
-  border-radius: 0.4rem 0 0 0.4rem;
-  background: var(--bg-page);
-  color: var(--text);
-}
-
-.footer-newsletter-btn {
-  padding: 0.5rem 1rem;
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--bg-page);
-  background: var(--green);
-  border: 1px solid var(--green);
-  border-radius: 0 0.4rem 0.4rem 0;
-  cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
-}
-
-.footer-newsletter-btn:hover {
-  background: var(--coffee);
-  border-color: var(--coffee);
+.footer-col--social .footer-social {
+  margin-top: 0;
 }
 
 .footer-social {
@@ -649,6 +612,10 @@ main {
 
 .footer-social-link:hover {
   color: var(--green);
+}
+
+.footer-social-link[aria-label] {
+  cursor: default;
 }
 
 .footer-bottom {
@@ -834,6 +801,10 @@ main {
   color: var(--green);
   background: var(--green-soft);
   opacity: 0.9;
+}
+
+.social-link[aria-label] {
+  cursor: default;
 }
 
 /* Responsive */
