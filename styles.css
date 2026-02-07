@@ -234,10 +234,31 @@ body {
 }
 
 /* Visit */
-.visit-content {
+.visit-with-image {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.outlet-image-wrap {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.outlet-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: middle;
+}
+
+.visit-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .visit-address,
@@ -246,6 +267,18 @@ body {
   font-size: 1rem;
   color: var(--text-muted);
   line-height: 1.8;
+}
+
+.visit-address {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.15rem;
+  color: var(--coffee);
+}
+
+.contact-outlet {
+  max-width: 480px;
+  margin-bottom: 2rem;
 }
 
 /* Page hero (inner pages) */
@@ -389,8 +422,11 @@ body {
     letter-spacing: 0.08em;
   }
 
-  .cards,
-  .visit-content {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .visit-with-image {
     grid-template-columns: 1fr;
   }
 
