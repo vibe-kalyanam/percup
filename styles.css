@@ -57,7 +57,7 @@ body {
 }
 
 .logo-img {
-  height: 48px;
+  height: 58px;
   width: auto;
   display: block;
   mix-blend-mode: multiply;
@@ -193,6 +193,16 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+  animation: card-zoom 6s ease-in-out infinite;
+}
+
+@keyframes card-zoom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
 
 .card-img-wrap::after {
@@ -248,13 +258,16 @@ body {
   background: var(--bg);
   aspect-ratio: 16 / 9;
   min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .outlet-img {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
