@@ -30,6 +30,7 @@
 html {
   font-size: 18px;
   scroll-behavior: smooth;
+  overflow-y: scroll;
 }
 
 body {
@@ -66,6 +67,7 @@ main {
 .logo-link {
   display: block;
   line-height: 0;
+  background: var(--header-footer-bg);
 }
 
 .logo-img {
@@ -73,6 +75,7 @@ main {
   width: auto;
   display: block;
   mix-blend-mode: multiply;
+  background: var(--header-footer-bg);
 }
 
 .nav {
@@ -336,6 +339,24 @@ main {
   margin: 0 auto 2rem;
 }
 
+.contact-hero-image-wrap {
+  max-width: 560px;
+  margin: 0 auto 2rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  aspect-ratio: 16 / 9;
+  min-height: 200px;
+}
+
+.contact-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
 /* Page hero (inner pages) */
 .page-hero {
   padding: 4rem 2rem 3rem;
@@ -487,6 +508,7 @@ main {
   display: inline-block;
   line-height: 0;
   margin-bottom: 1rem;
+  background: var(--header-footer-bg);
 }
 
 .footer-logo {
@@ -494,6 +516,7 @@ main {
   width: auto;
   display: block;
   mix-blend-mode: multiply;
+  background: var(--header-footer-bg);
 }
 
 .footer-contact-line {
@@ -669,7 +692,7 @@ main {
 
 /* Contact page */
 .contact-page {
-  max-width: 640px;
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
 }
