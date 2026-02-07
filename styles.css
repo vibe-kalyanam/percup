@@ -294,7 +294,7 @@ body {
 
 .contact-outlet {
   max-width: 480px;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
 }
 
 /* Page hero (inner pages) */
@@ -326,6 +326,12 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-block {
+  text-align: center;
 }
 
 .contact-block .section-title {
@@ -399,10 +405,15 @@ body {
 }
 
 /* Content block (e.g. Catering) */
+.content-block {
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .content-block p {
   margin: 0 0 1.25rem;
   color: var(--text-muted);
-  max-width: 560px;
 }
 
 .content-block p:last-of-type {
