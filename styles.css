@@ -1,18 +1,20 @@
 /* PERCUP — coffee brown & green theme */
 
 :root {
-  --bg: #f8f6f2;
+  /* Coffee brown & green leaves theme */
+  --bg: #f5f2ec;
   --text: #3d2e24;
   --text-muted: #5c4a3a;
   --coffee: #5c4033;
-  --coffee-light: #8b6914;
+  --coffee-light: #7a5c4a;
   --green: #2d5a27;
   --green-light: #4a7c43;
+  --green-leaves: #3d6b35;
   --accent: var(--coffee);
   --accent-green: var(--green);
   --accent-soft: rgba(92, 64, 51, 0.12);
-  --green-soft: rgba(45, 90, 39, 0.12);
-  --border: #e0d9d0;
+  --green-soft: rgba(45, 90, 39, 0.14);
+  --border: #ddd5c9;
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "DM Sans", system-ui, sans-serif;
 }
@@ -58,6 +60,7 @@ body {
   height: 48px;
   width: auto;
   display: block;
+  mix-blend-mode: multiply;
 }
 
 .nav {
@@ -102,7 +105,7 @@ body {
   font-weight: 500;
   letter-spacing: 0.12em;
   margin: 0 0 1.5rem;
-  color: var(--text);
+  color: var(--coffee);
 }
 
 .hero-desc {
@@ -160,7 +163,7 @@ body {
   font-size: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.06em;
-  color: var(--text-muted);
+  color: var(--coffee);
   margin: 0 0 2.5rem;
 }
 
@@ -172,24 +175,59 @@ body {
 }
 
 .card {
-  padding: 2rem;
-  background: var(--accent-soft);
+  padding: 0;
+  background: var(--bg);
   border-radius: 1rem;
   border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.card-img-wrap {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-img-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.card-img-wrap--coffee::after {
+  background: linear-gradient(180deg, transparent 30%, rgba(92, 64, 51, 0.35) 100%);
+}
+
+.card-img-wrap--tea::after {
+  background: linear-gradient(180deg, transparent 30%, rgba(45, 90, 39, 0.35) 100%);
+}
+
+.card-img-wrap + .card-label {
+  padding: 1.25rem 1.5rem 0;
 }
 
 .card-label {
   display: block;
+  padding: 0 1.5rem;
   font-family: var(--font-display);
   font-size: 1.1rem;
   font-weight: 500;
-  color: var(--green);
-  margin-bottom: 0.75rem;
+  color: var(--green-leaves);
+  margin-bottom: 0.5rem;
   letter-spacing: 0.04em;
 }
 
 .card p {
   margin: 0;
+  padding: 0 1.5rem 1.5rem;
   font-size: 0.95rem;
   color: var(--text-muted);
   line-height: 1.65;
