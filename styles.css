@@ -258,16 +258,13 @@ body {
   background: var(--bg);
   aspect-ratio: 16 / 9;
   min-height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .outlet-img {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 }
 
@@ -452,6 +449,208 @@ body {
   letter-spacing: 0.04em;
 }
 
+.footer-copy {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Home page footer with logo + contact */
+.footer--home .footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-logo-link {
+  display: inline-block;
+  line-height: 0;
+  margin-bottom: 1rem;
+}
+
+.footer-logo {
+  height: 52px;
+  width: auto;
+  display: block;
+  mix-blend-mode: multiply;
+}
+
+.footer-contact {
+  margin-bottom: 1.25rem;
+}
+
+.footer-contact p {
+  margin: 0 0 0.35rem;
+  font-size: 0.9rem;
+}
+
+.footer-link {
+  color: var(--green);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--coffee);
+}
+
+.footer-address,
+.footer-hours {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.footer--home .footer-copy {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+/* Contact page */
+.contact-page {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-chat-block,
+.contact-reach-block,
+.contact-form-block,
+.contact-info-block,
+.contact-social-block {
+  margin-bottom: 2.5rem;
+}
+
+.contact-heading {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--coffee);
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+.contact-text {
+  margin: 0 0 1rem;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.contact-reach-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+.contact-link-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--green);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.contact-link-item:hover {
+  color: var(--coffee);
+}
+
+.contact-icon {
+  display: inline-flex;
+  color: var(--coffee);
+}
+
+.contact-icon svg {
+  flex-shrink: 0;
+}
+
+.contact-form {
+  text-align: left;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 0.35rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--bg);
+  color: var(--text);
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+.form-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-submit {
+  margin-top: 0.5rem;
+}
+
+.contact-info-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  text-align: left;
+  max-width: 560px;
+  margin: 0 auto 2.5rem;
+}
+
+.contact-info-label {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--coffee);
+  margin: 0 0 0.35rem;
+}
+
+.contact-info-block p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--text-muted);
+  background: var(--green-soft);
+  border-radius: 50%;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.social-link:hover {
+  color: var(--green);
+  background: var(--green-soft);
+  opacity: 0.9;
+}
+
 /* Responsive */
 @media (max-width: 700px) {
   .hero {
@@ -484,5 +683,15 @@ body {
 
   .page-hero {
     padding: 3rem 1.5rem 2rem;
+  }
+
+  .contact-info-block {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contact-reach-links {
+    flex-direction: column;
+    align-items: center;
   }
 }
