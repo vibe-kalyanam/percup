@@ -1,12 +1,18 @@
-/* PERCUP — minimal coffee & tea landing */
+/* PERCUP — coffee brown & green theme */
 
 :root {
-  --bg: #f6f3ee;
-  --text: #2a241a;
-  --text-muted: #5c5348;
-  --accent: #a67c52;
-  --accent-soft: rgba(166, 124, 82, 0.15);
-  --border: #e5e0d8;
+  --bg: #f8f6f2;
+  --text: #3d2e24;
+  --text-muted: #5c4a3a;
+  --coffee: #5c4033;
+  --coffee-light: #8b6914;
+  --green: #2d5a27;
+  --green-light: #4a7c43;
+  --accent: var(--coffee);
+  --accent-green: var(--green);
+  --accent-soft: rgba(92, 64, 51, 0.12);
+  --green-soft: rgba(45, 90, 39, 0.12);
+  --border: #e0d9d0;
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "DM Sans", system-ui, sans-serif;
 }
@@ -37,34 +43,40 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 2rem;
+  padding: 1rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  border-bottom: 1px solid var(--border);
 }
 
-.logo {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  color: var(--text);
-  text-decoration: none;
+.logo-link {
+  display: block;
+  line-height: 0;
+}
+
+.logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
 }
 
 .nav {
   display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .nav a {
   color: var(--text-muted);
   text-decoration: none;
   font-size: 0.9rem;
+  font-weight: 500;
   transition: color 0.2s ease;
 }
 
-.nav a:hover {
-  color: var(--accent);
+.nav a:hover,
+.nav a.active {
+  color: var(--green);
 }
 
 /* Hero */
@@ -109,14 +121,14 @@ body {
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--bg);
-  background: var(--text);
+  background: var(--coffee);
   text-decoration: none;
   border-radius: 2rem;
   transition: background 0.2s ease, transform 0.15s ease;
 }
 
 .cta:hover {
-  background: var(--accent);
+  background: var(--green);
   transform: translateY(-1px);
 }
 
@@ -132,8 +144,8 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: var(--accent);
-  opacity: 0.6;
+  background: var(--green);
+  opacity: 0.7;
 }
 
 /* Sections */
@@ -171,7 +183,7 @@ body {
   font-family: var(--font-display);
   font-size: 1.1rem;
   font-weight: 500;
-  color: var(--accent);
+  color: var(--green);
   margin-bottom: 0.75rem;
   letter-spacing: 0.04em;
 }
@@ -196,6 +208,122 @@ body {
   font-size: 1rem;
   color: var(--text-muted);
   line-height: 1.8;
+}
+
+/* Page hero (inner pages) */
+.page-hero {
+  padding: 4rem 2rem 3rem;
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.page-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 8vw, 3rem);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  margin: 0 0 0.5rem;
+}
+
+.page-desc {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Contact page */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 600px;
+}
+
+.contact-block .section-title {
+  margin-bottom: 1rem;
+}
+
+.link {
+  color: var(--green);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--coffee);
+}
+
+/* Menu page */
+.menu-list {
+  list-style: none;
+  margin: 0 0 2.5rem;
+  padding: 0;
+}
+
+.menu-list:last-of-type {
+  margin-bottom: 0;
+}
+
+.menu-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+  gap: 1rem;
+}
+
+.menu-item {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.menu-price {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* FAQs */
+.faq-list {
+  margin: 0;
+  padding: 0;
+  max-width: 640px;
+}
+
+.faq-item {
+  margin-bottom: 2rem;
+}
+
+.faq-q {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text);
+  margin: 0 0 0.5rem;
+}
+
+.faq-a {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+/* Content block (e.g. Catering) */
+.content-block p {
+  margin: 0 0 1.25rem;
+  color: var(--text-muted);
+  max-width: 560px;
+}
+
+.content-block p:last-of-type {
+  margin-bottom: 0;
+}
+
+.content-block .cta {
+  margin-top: 1rem;
 }
 
 /* Footer */
@@ -234,5 +362,13 @@ body {
 
   .nav {
     gap: 1.25rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero {
+    padding: 3rem 1.5rem 2rem;
   }
 }
