@@ -16,7 +16,12 @@
       <a href="index.html" class="logo-link logo-link--left">
         <img srcset="assets/logo.png 1x, assets/logo.png 2x" src="assets/logo.png" loading="lazy" width="500" height="500" alt="PER CUP — Coffee & Tea" class="logo-img" style="height: auto; max-width: 100px;">
       </a>
-      <nav class="nav">
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav class="nav" id="main-nav">
         <a href="index.html">Home</a>
         <a href="menu.html" class="active">Menu</a>
         <a href="catering.html">Catering</a>
@@ -82,6 +87,14 @@
   <script>
     if (typeof WOW !== 'undefined') { new WOW({ offset: 60, mobile: true }).init(); }
     document.getElementById('scroll-top')?.addEventListener('click', function(e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    (function() {
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('main-nav');
+      if (toggle && nav) {
+        toggle.addEventListener('click', function() { var open = document.body.classList.toggle('nav-open'); toggle.setAttribute('aria-expanded', open); });
+        nav.querySelectorAll('a').forEach(function(link) { link.addEventListener('click', function() { document.body.classList.remove('nav-open'); toggle.setAttribute('aria-expanded', 'false'); }); });
+        document.addEventListener('keydown', function(e) { if (e.key === 'Escape') { document.body.classList.remove('nav-open'); toggle.setAttribute('aria-expanded', 'false'); } }); }
+    })();
   </script>
 </body>
 </html>
