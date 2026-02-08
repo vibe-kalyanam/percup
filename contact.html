@@ -32,9 +32,6 @@
     </section>
 
     <section class="section contact-page">
-      <div class="outlet-image-wrap contact-outlet">
-        <img src="assets/outlet.jpeg" alt="Warm latte at PERCUP" class="outlet-img">
-      </div>
       <div class="contact-hero-image-wrap">
         <img src="assets/contact-hero.jpg" alt="Our cozy coffee shop" class="contact-hero-img">
       </div>
@@ -64,7 +61,7 @@
       <div class="contact-form-block">
         <h2 class="contact-heading">Send us a message</h2>
         <p class="contact-text">Whether it's a compliment or a concern, a request or a thought, just drop us a message by filling out this form. We're listening to you.</p>
-        <form class="contact-form" action="#" method="post">
+        <form class="contact-form" id="contact-form" action="#" method="post">
           <label class="form-label" for="name">Your Name</label>
           <input class="form-input" type="text" id="name" name="name" required>
           <label class="form-label" for="email">Your Email</label>
@@ -150,6 +147,9 @@
       <a href="#" id="scroll-top" class="scroll-top" aria-label="Scroll to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg></a>
     </div>
   </footer>
-  <script>document.getElementById('scroll-top')?.addEventListener('click', function(e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });</script>
+  <script>
+    document.getElementById('scroll-top')?.addEventListener('click', function(e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    document.getElementById('contact-form')?.addEventListener('submit', function(e) { e.preventDefault(); });
+  </script>
 </body>
 </html>
