@@ -69,8 +69,12 @@ main {
   background: var(--bg-page);
 }
 
+.logo-link--left {
+  margin-right: auto;
+}
+
 .logo-img {
-  height: 58px;
+  height: 78px;
   width: auto;
   display: block;
   mix-blend-mode: multiply;
@@ -131,9 +135,6 @@ main {
 .carousel-slide {
   position: absolute;
   inset: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   opacity: 0;
   transition: opacity 0.6s ease;
   z-index: 0;
@@ -142,6 +143,20 @@ main {
 .carousel-slide.active {
   opacity: 1;
   z-index: 1;
+}
+
+.carousel-slide-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: carousel-zoom 8s ease-in-out infinite;
+}
+
+@keyframes carousel-zoom {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
 }
 
 .carousel-caption {
@@ -196,11 +211,16 @@ main {
   background: #fff;
   color: var(--coffee);
   font-family: "Lato", sans-serif;
+  border: 2px solid #fff;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .cta--light:hover {
-  background: var(--green);
+  background: var(--coffee);
   color: #fff;
+  border-color: var(--coffee);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(92, 64, 51, 0.35);
 }
 
 .carousel-btn {
@@ -358,6 +378,17 @@ main {
   letter-spacing: 0.06em;
   color: var(--coffee);
   margin: 0 0 2.5rem;
+}
+
+.section-title--reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-title--reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Drinks cards */
@@ -541,13 +572,19 @@ main {
   margin-top: 0.5rem;
 }
 
-.page-title {
+.page-title,
+.headingBreadcrumb {
   font-family: "Lato", sans-serif;
-  font-size: clamp(2rem, 8vw, 3rem);
-  font-weight: 700;
-  letter-spacing: 0.06em;
+  font-size: clamp(1.35rem, 5vw, 1.75rem);
+  font-weight: 600;
+  letter-spacing: 1px;
   color: var(--text);
-  margin: 0;
+  margin: 0 0 1rem;
+  position: relative;
+}
+
+.page-hero .page-title {
+  margin-bottom: 1rem;
 }
 
 .page-desc {
