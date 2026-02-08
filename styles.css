@@ -154,10 +154,11 @@ main {
   text-align: center;
   padding: 2rem;
   background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.4) 100%);
+  font-family: "Lato", sans-serif;
 }
 
 .carousel-tag {
-  font-family: var(--font-display);
+  font-family: "Lato", sans-serif;
   font-size: clamp(0.95rem, 2.5vw, 1.15rem);
   font-style: italic;
   font-weight: 400;
@@ -168,7 +169,7 @@ main {
 }
 
 .carousel-title {
-  font-family: var(--font-display);
+  font-family: "Lato", sans-serif;
   font-size: clamp(2.5rem, 10vw, 5rem);
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -178,6 +179,7 @@ main {
 }
 
 .carousel-desc {
+  font-family: "Lato", sans-serif;
   font-size: clamp(0.95rem, 2vw, 1.1rem);
   color: #fff;
   margin: 0 0 1.5rem;
@@ -193,6 +195,7 @@ main {
 .cta--light {
   background: #fff;
   color: var(--coffee);
+  font-family: "Lato", sans-serif;
 }
 
 .cta--light:hover {
@@ -456,6 +459,7 @@ main {
   display: block;
   object-fit: cover;
   object-position: center;
+  animation: card-zoom 6s ease-in-out infinite;
 }
 
 .visit-content {
@@ -513,12 +517,13 @@ main {
   object-fit: cover;
   object-position: center;
   display: block;
+  animation: card-zoom 6s ease-in-out infinite;
 }
 
 /* Page hero (inner pages) */
 .page-hero {
   width: 100%;
-  padding: 4rem 2rem 3rem;
+  padding: 2.25rem 2rem 2rem;
   text-align: center;
   background: var(--header-footer-bg);
   border-bottom: 1px solid var(--border);
@@ -537,7 +542,7 @@ main {
 }
 
 .page-title {
-  font-family: var(--font-display);
+  font-family: "Lato", sans-serif;
   font-size: clamp(2rem, 8vw, 3rem);
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -1009,7 +1014,7 @@ main {
   }
 
   .page-hero {
-    padding: 3rem 1.5rem 2rem;
+    padding: 2rem 1.5rem 1.5rem;
   }
 
   .contact-info-block {

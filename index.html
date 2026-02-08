@@ -6,7 +6,7 @@
   <title>PERCUP — Coffee & Tea</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -74,10 +74,6 @@
         <button type="button" class="carousel-dot" aria-label="Slide 4" data-slide="3"></button>
         <button type="button" class="carousel-dot" aria-label="Slide 5" data-slide="4"></button>
       </div>
-    </section>
-
-    <section class="divider" aria-hidden="true">
-      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
     </section>
 
     <section id="drinks" class="section drinks">
@@ -211,9 +207,9 @@
 
       function resetInterval() {
         clearInterval(interval);
-        interval = setInterval(next, 5000);
+        interval = setInterval(next, 3000);
       }
-      interval = setInterval(next, 5000);
+      interval = setInterval(next, 3000);
     })();
   </script>
 </body>
