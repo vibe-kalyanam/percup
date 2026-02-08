@@ -651,6 +651,15 @@ main {
   font-family: var(--font-body);
 }
 
+.testimonial-card-name {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--green);
+  font-family: var(--font-display);
+}
+
 @media (max-width: 992px) {
   .testimonials-row {
     grid-template-columns: repeat(3, 1fr);
@@ -848,7 +857,7 @@ main {
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2.5rem 2rem 1.5rem;
+  padding: 1.25rem 2rem 1.5rem;
   align-items: start;
 }
 
@@ -904,8 +913,17 @@ main {
   gap: 0.5rem;
   margin: 0 0 0.6rem;
   font-size: 0.88rem;
+  font-weight: 400;
   color: var(--text-muted);
   line-height: 1.5;
+}
+
+.footer-contact-line .footer-label {
+  font-weight: 700;
+}
+
+.footer-contact-line .footer-contact-text {
+  font-weight: 400;
 }
 
 .footer-icon {
