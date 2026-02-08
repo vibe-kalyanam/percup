@@ -26,11 +26,54 @@
   </header>
 
   <main>
-    <section class="hero">
-      <p class="hero-tag">Coffee & tea, by the cup.</p>
-      <h1 class="hero-title">PERCUP</h1>
-      <p class="hero-desc">A quiet corner for your favourite brew. Specialty coffee and loose-leaf tea in the heart of the city.</p>
-      <a href="#visit" class="cta">Find us</a>
+    <section class="hero-carousel" aria-label="Home carousel">
+      <div class="carousel-inner">
+        <div class="carousel-slide active" data-slide="0" style="background-image: url('assets/carousel-1.jpeg')">
+          <div class="carousel-caption">
+            <p class="carousel-tag">Coffee & tea, by the cup.</p>
+            <h1 class="carousel-title">PERCUP</h1>
+            <p class="carousel-desc">A quiet corner for your favourite brew. Specialty coffee and loose-leaf tea in the heart of the city.</p>
+            <a href="#visit" class="cta cta--light">Find us</a>
+          </div>
+        </div>
+        <div class="carousel-slide" data-slide="1" style="background-image: url('assets/carousel-2.jpeg')">
+          <div class="carousel-caption">
+            <p class="carousel-tag">From crop to cup</p>
+            <h2 class="carousel-title">Fresh from the plant</h2>
+            <p class="carousel-desc">Sun-ripened coffee cherries, picked at their peak. We trace every bean back to the branch.</p>
+          </div>
+        </div>
+        <div class="carousel-slide" data-slide="2" style="background-image: url('assets/carousel-3.jpeg')">
+          <div class="carousel-caption">
+            <p class="carousel-tag">Handcrafted with care</p>
+            <h2 class="carousel-title">From our hands to your cup</h2>
+            <p class="carousel-desc">Every batch is chosen and roasted with care. Quality you can see, taste, and feel.</p>
+          </div>
+        </div>
+        <div class="carousel-slide" data-slide="3" style="background-image: url('assets/carousel-4.jpeg')">
+          <div class="carousel-caption">
+            <p class="carousel-tag">Naturally sourced</p>
+            <h2 class="carousel-title">Fresh roasted, fresh served</h2>
+            <p class="carousel-desc">Premium beans in every brew. We bring the warmth of the roastery to your table.</p>
+          </div>
+        </div>
+        <div class="carousel-slide" data-slide="4" style="background-image: url('assets/carousel-5.jpeg')">
+          <div class="carousel-caption">
+            <p class="carousel-tag">Quality in every bean</p>
+            <h2 class="carousel-title">Premium beans, every time</h2>
+            <p class="carousel-desc">From select harvests to your cup. PERCUP is where great coffee begins.</p>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="carousel-btn carousel-prev" aria-label="Previous slide">&lsaquo;</button>
+      <button type="button" class="carousel-btn carousel-next" aria-label="Next slide">&rsaquo;</button>
+      <div class="carousel-dots" aria-label="Carousel navigation">
+        <button type="button" class="carousel-dot active" aria-label="Slide 1" data-slide="0"></button>
+        <button type="button" class="carousel-dot" aria-label="Slide 2" data-slide="1"></button>
+        <button type="button" class="carousel-dot" aria-label="Slide 3" data-slide="2"></button>
+        <button type="button" class="carousel-dot" aria-label="Slide 4" data-slide="3"></button>
+        <button type="button" class="carousel-dot" aria-label="Slide 5" data-slide="4"></button>
+      </div>
     </section>
 
     <section class="divider" aria-hidden="true">
@@ -141,6 +184,37 @@
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+    (function() {
+      var carousel = document.querySelector('.hero-carousel');
+      if (!carousel) return;
+      var slides = carousel.querySelectorAll('.carousel-slide');
+      var dots = carousel.querySelectorAll('.carousel-dot');
+      var total = slides.length;
+      var current = 0;
+      var interval;
+
+      function goTo(n) {
+        current = (n + total) % total;
+        slides.forEach(function(s, i) { s.classList.toggle('active', i === current); });
+        dots.forEach(function(d, i) { d.classList.toggle('active', i === current); });
+      }
+
+      function next() { goTo(current + 1); }
+      function prev() { goTo(current - 1); }
+
+      carousel.querySelector('.carousel-next')?.addEventListener('click', function() { next(); resetInterval(); });
+      carousel.querySelector('.carousel-prev')?.addEventListener('click', function() { prev(); resetInterval(); });
+      dots.forEach(function(dot, i) {
+        dot.addEventListener('click', function() { goTo(i); resetInterval(); });
+      });
+
+      function resetInterval() {
+        clearInterval(interval);
+        interval = setInterval(next, 5000);
+      }
+      interval = setInterval(next, 5000);
+    })();
   </script>
 </body>
 </html>
