@@ -966,22 +966,9 @@ body.nav-open .nav-toggle-bar:nth-child(3) {
 
 .footer-icon {
   flex-shrink: 0;
-  margin: 2px 0 0 0;
+  margin-top: 2px;
   padding: 0;
   color: var(--coffee);
-  display: inline-flex;
-  align-items: flex-start;
-  justify-content: center;
-  width: 16px;
-  min-width: 16px;
-  max-width: 16px;
-  height: 16px;
-  box-sizing: content-box;
-}
-.footer-icon svg {
-  width: 16px;
-  height: 16px;
-  display: block;
 }
 
 .footer-contact-line .footer-link {
@@ -1371,7 +1358,7 @@ body.nav-open .nav-toggle-bar:nth-child(3) {
   }
 
   .carousel-caption {
-    padding: 0.75rem 1rem 3.5rem 1rem;
+    padding: 0.75rem 1rem 5rem 1rem;
     justify-content: center;
     overflow: visible;
   }
@@ -1449,14 +1436,6 @@ body.nav-open .nav-toggle-bar:nth-child(3) {
 
   .footer-col--logo .footer-contact-line {
     justify-content: center;
-  }
-
-  .footer-contact-line .footer-icon {
-    width: 16px;
-    min-width: 16px;
-    max-width: 16px;
-    margin: 2px 0 0 0;
-    padding: 0;
   }
 
   .footer-newsletter {
