@@ -570,6 +570,7 @@ main {
 
 .testimonials .title_section {
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .testimonials .title_section .title {
@@ -580,6 +581,7 @@ main {
   letter-spacing: 0.02em;
   line-height: 1.5;
   color: #fff;
+  text-align: center;
 }
 
 .testimonials .title_section .title p {
@@ -590,7 +592,7 @@ main {
 .testimonials-row {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
+  gap: 1.75rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -842,7 +844,7 @@ main {
 
 .footer-inner {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  grid-template-columns: 1fr 1fr 1fr 1.2fr;
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -860,10 +862,11 @@ main {
   align-items: flex-start;
 }
 
+/* Align logo with Menu/Support headings: same effective row height */
 .footer-col--logo .footer-logo-link {
   display: inline-block;
   line-height: 0;
-  margin-bottom: 0.75rem;
+  margin: 0 0 0.75rem 0;
   background: var(--header-footer-bg);
 }
 
@@ -876,6 +879,7 @@ main {
   background: var(--header-footer-bg);
 }
 
+/* Address/contact below logo, matching spacing of "What we pour" below Menu */
 .footer-col--logo .footer-contact-lines {
   display: flex;
   flex-direction: column;
@@ -887,6 +891,7 @@ main {
 
 .footer-col--logo .footer-contact-lines .footer-contact-line {
   margin-bottom: 0.4rem;
+  font-size: 0.9rem;
 }
 
 .footer-col--logo .footer-contact-lines .footer-contact-line:last-child {
