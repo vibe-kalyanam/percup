@@ -50,10 +50,9 @@ main {
 /* Header */
 .header {
   width: 100%;
-  background: var(--header-footer-bg);
+  background: var(--bg-page);
   border-bottom: 1px solid var(--border);
 }
-
 
 .header-inner {
   display: flex;
@@ -67,7 +66,7 @@ main {
 .logo-link {
   display: block;
   line-height: 0;
-  background: var(--header-footer-bg);
+  background: var(--bg-page);
 }
 
 .logo-img {
@@ -75,7 +74,7 @@ main {
   width: auto;
   display: block;
   mix-blend-mode: multiply;
-  background: var(--header-footer-bg);
+  background: var(--bg-page);
 }
 
 .nav {
@@ -363,6 +362,8 @@ main {
   max-width: 680px;
   margin: 0 auto;
   text-align: center;
+  background: var(--header-footer-bg);
+  border-bottom: 1px solid var(--border);
 }
 
 .page-title {
