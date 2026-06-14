@@ -886,8 +886,122 @@ body.nav-open .nav-toggle-bar:nth-child(3) {
   margin-bottom: 0;
 }
 
+.content-subtitle {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--coffee);
+  margin: 1.5rem 0 0.75rem;
+}
+
+.content-block .content-subtitle:first-of-type {
+  margin-top: 0;
+}
+
 .content-block .cta {
   margin-top: 1rem;
+}
+
+/* Business Solutions (Catering page) */
+.business-solutions {
+  max-width: 720px;
+}
+
+.business-solutions .section-title {
+  text-align: center;
+}
+
+.solution-item {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.solution-item:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.solution-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--coffee);
+  margin: 0 0 1rem;
+  line-height: 1.4;
+}
+
+.solution-num {
+  display: inline-block;
+  min-width: 1.5rem;
+  margin-right: 0.35rem;
+  color: var(--green);
+  font-weight: 700;
+}
+
+.solution-text {
+  margin: 0 0 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.solution-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+.solution-list li {
+  margin-bottom: 0.35rem;
+}
+
+.solution-list li:last-child {
+  margin-bottom: 0;
+}
+
+.why-percup {
+  margin-top: 2.5rem;
+  padding: 1.75rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
+
+.why-percup .solution-title {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.why-percup-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.why-percup-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.6rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.why-percup-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--green);
+  font-weight: 700;
+}
+
+.why-percup-list li:last-child {
+  margin-bottom: 0;
+}
+
+.business-solutions-cta {
+  margin: 2.5rem 0 0;
+  text-align: center;
 }
 
 /* Footer — reference multi-column layout */
